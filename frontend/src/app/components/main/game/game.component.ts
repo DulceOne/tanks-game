@@ -21,7 +21,7 @@ export class GameComponent implements OnInit {
 
   ngOnInit() {
     this.subscription = this.messageService
-      .getMessage()
+      .subject
       .subscribe((message) => {
         this.msgList.push(message);
       });
